@@ -1,14 +1,14 @@
 <template>
   <div id="app">
     <h1>ini state {{number}} {{alamat}}</h1>
-    <HelloWorld msg="tentang alamat"/>
+    <HelloWorld :msg="alamat"/>
     <p>{{getName}} itu name</p>
     <p>{{people.age}} itu age</p>
     <p>{{people.address}} itu address</p>
     <p>{{numberIcr}}</p>
-    <button v-on:click="changeName">Ganti nama menjadi bubu</button>
+    <button @click="changeName">Ganti nama menjadi bubu</button>
     <button @click="displayAlert">Display</button>
-    <p v-for="h in cars" v-bind:key="h">{{h}}</p>
+    <p v-for="h in cars" :key="h">{{h}}</p>
 
     <img v-if="image" alt="Vue logo" src="./assets/logo.png">
     <img v-else alt="gambar 2" src="./assets/a.png">
